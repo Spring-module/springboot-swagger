@@ -8,6 +8,10 @@
 */
 
 package com.kaiyun.springboot.swagger.domain;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * ClassName:User <br/>
  * Function: TODO ADD FUNCTION. <br/>
@@ -17,10 +21,13 @@ package com.kaiyun.springboot.swagger.domain;
  * @since    JDK 1.8
  * @see 	 
  */
+@ApiModel
 public class User {
-
+	@ApiModelProperty(required=true, value="用户Id", example="例如：1000")
     private Long id;
+	@ApiModelProperty(required=true, value="用户姓名", example="例如：张三")
     private String name;
+	@ApiModelProperty(required=true, value="用户年龄", example="例如：23")
     private Integer age;
 
     public Long getId() {
